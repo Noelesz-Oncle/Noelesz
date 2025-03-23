@@ -11,11 +11,16 @@
             background-position: center; /* Memusatkan gambar */
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            margin: 0; /* Menghapus margin default */
+            height: 100vh; /* Mengatur tinggi body agar memenuhi viewport */
+            display: flex; /* Menggunakan flexbox untuk tata letak */
+            flex-direction: column; /* Mengatur arah flex menjadi kolom */
+            justify-content: center; /* Memusatkan konten secara vertikal */
             color: white; /* Mengubah warna teks menjadi putih agar terlihat jelas di latar belakang */
         }
         h1 {
             animation: fadeIn 2s;
+            margin-bottom: 20px; /* Memberikan jarak di bawah judul */
         }
         @keyframes fadeIn {
             from { opacity: 0; }
