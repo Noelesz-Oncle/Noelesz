@@ -1,437 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ucapan Minta Maaf</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Website Keren dengan Audio</title>
     <style>
         body {
+            background-image: url('https://files.catbox.moe/w9q4qe.jpg'); /* Ganti dengan URL gambar latar belakang Anda */
+            background-size: cover; /* Mengatur gambar agar menutupi seluruh latar belakang */
+            background-position: center; /* Memusatkan gambar */
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #333;
             text-align: center;
             padding: 50px;
-            background-image: url('https://telegra.ph/file/970093eaca8a4347d96d0-bd27c279fc595dd9d3.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
+            color: white; /* Mengubah warna teks menjadi putih agar terlihat jelas di latar belakang */
         }
-        
-.banner {
-    position: absolute;
-    bottom: 0; /* Pindahkan ke bagian bawah */
-    left: 0;
-    width: 100%;
-    height: 450px; /* Atur tinggi sesuai kebutuhan */
-    overflow: hidden;
-    z-index: 2; /* Pastikan banner di atas elemen lainnya */
-    justify-content: center; /* Mengatur gambar agar berada di tengah secara horizontal */
-    align-items: center;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    animation: slide 15s infinite; /* Durasi animasi */
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0); }
-    25% { transform: translateX(-100%); }
-    45% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    70% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-}
-
-/* Gaya umum */
-body {
-    font-size: 1rem; /* Ukuran font dasar */
-}
-
-/* Untuk perangkat dengan lebar maksimum 600px (HP) */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em; /* Ukuran font lebih kecil untuk HP */
-    }
-
-    p {
-        font-size: 1em; /* Ukuran font lebih kecil untuk HP */
-    }
-
-    .button {
-        padding: 10px 20px; /* Ukuran tombol lebih kecil */
-    }
-
-    .banner {
-        height: 200px; /* Tinggi banner lebih kecil */
-    }
-}
-
-/* Untuk perangkat dengan lebar maksimum 1024px (tablet) */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 1.8em; /* Ukuran font sedikit lebih kecil untuk tablet */
-    }
-
-    p {
-        font-size: 1.1em; /* Ukuran font sedikit lebih kecil untuk tablet */
-    }
-
-    .button {
-        padding: 12px 25px; /* Ukuran tombol sedikit lebih kecil */
-    }
-
-    .banner {
-        height: 300px; /* Tinggi banner sedikit lebih kecil */
-    }
-}
-
-
-/* Untuk perangkat dengan lebar lebih dari 1024px (desktop) */
-@media (min-width: 1025px) {
-    h1 {
-        font-size: 2.0em; /* Ukuran font untuk desktop */
-    }
-
-    p {
-        font-size: 1.2em; /* Ukuran font untuk desktop */
-    }
-
-    .button {
-        padding: 15px 30px; /* Ukuran tombol untuk desktop */
-    }
-
-    .banner {
-        height: 350px; /* Tinggi banner untuk desktop */
-    }
-}
-
-.welcome-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang gelap dengan transparansi */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10; /* Pastikan overlay di atas elemen lainnya */
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-h1 {
-    font-family: 'Lobster', cursive; /* Menggunakan font Lobster */
-    font-size: 2em; /* Ukuran font lebih besar */
-    color: #000000; /* Warna merah cerah */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan */
-    margin-bottom: 20px;
-    position: relative;
-    animation: fadeIn 1s ease-in-out; /* Animasi muncul */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); /* Muncul dari atas */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            min-height: 60px;
-            color: #000000;
-            font-weight: bold;
+        h1 {
+            animation: fadeIn 2s;
         }
-
-        .cursor {
-            animation: blink 1s infinite;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .button {
-            background-color: #003366;
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(0, 123, 255, 0.8); /* Warna latar belakang tombol dengan transparansi */
             color: white;
-            padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
             transition: background-color 0.3s;
         }
-
-        .button:hover {
-            background-color: #005580;
+        button:hover {
+            background-color: rgba(0, 86, 179, 0.8); /* Warna latar belakang tombol saat hover */
         }
-
-        .snow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            color: white;
-            font-size: 1em;
-            opacity: 0.8;
-            pointer-events: none;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-
-        audio {
-            display: none;
-        }
-        
-        .jatuh {
-        color: #000000;
-          font-weight: bold;
-        }
-          .jatuh span {
-      animation: jatuh 2s ease-in-out alternate;
-      display: inline-block;
-    }
-    
-    .jatuh span:nth-child(1) {
-      animation-delay: 0s;
-    }
-    
-    .jatuh span:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-    
-    .jatuh span:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-    .jatuh span:nth-child(4) {
-      animation-delay: 0.3s;
-    }
-    
-    .jatuh span:nth-child(5) {
-      animation-delay: 0.4s;
-    }
-    .jatuh span:nth-child(6) {
-      animation-delay: 0.5s;
-    }
-    .jatuh span:nth-child(7) {
-      animation-delay: 0.6s;
-    }
-    .jatuh span:nth-child(8) {
-      animation-delay: 0.7s;
-    }
-    .jatuh span:nth-child(9) {
-      animation-delay: 0.8s;
-    }
-    .jatuh span:nth-child(10) {
-      animation-delay: 0.9s;
-    }
-    .jatuh span:nth-child(11) {
-      animation-delay: 0.10s;
-    }
-    
-    /* tambahkan properti animation-delay untuk setiap huruf */
-    
-    .jatuh span:nth-child(1) {
-      animation-delay: 0s;
-    }
-    
-    .jatuh span:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-    
-    .jatuh span:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-    
-    /* tambahkan properti animation-delay untuk setiap huruf */
-        @keyframes jatuh {
-          0% {
-            transform: translateY(0);
-            
-          }
-          100% {
-            transform: translateY(100px);
-          }
-            
-          }
-        
-        
     </style>
 </head>
-
 <body>
-  <div class="welcome-overlay" id="welcomeOverlay">
-    <h2>Selamat Datang!</h2>
-    <p>Tekan tombol untuk melanjutkan.</p>
-    <button class="button" onclick="hideWelcome()">Lanjutkan</button>
-</div>
-  
 
-    <audio id="background-music" loop>
-        <source src="https://www.zamzar.com/files/0195b025-454a-7055-baed-b395c691a396/111588358/?tcs=z98" type="audio/mpeg">
-        Browser Anda tidak mendukung pemutaran audio.
-    </audio>
+    <h1>Selamat Datang di Website Keren!</h1>
+    <button onclick="playAudio()">Klik untuk Memutar Musik</button>
 
-    <h1>AKU MINTA MAAF</h1>
-    <p id="typing-effect"></p>
-    <button class="button" onclick="playMusic()">Klik Putar Musik</button>
-
-    <div class="snow" id="snow-container"></div>
-    
-  
-      <div class="jatuh">
-    <span>m</span>
-    <span>e</span>
-    <span>m</span>
-    <span>a</span>
-    <span>n</span>
-    <span>g</span>
-    <span> </span>
-    <span>i</span>
-    <span>n</span>
-    <span>i</span>
-    <span> </span>
-    <span>m</span>
-    <span>u</span>
-    <span>r</span>
-    <span>n</span>
-    <span>i</span>
-    <span> </span>
-    <span>k</span>
-    <span>e</span>
-    <span>s</span>
-    <span>a</span>
-    <span>l</span>
-    <span>a</span>
-    <span>h</span>
-    <span>a</span>
-    <span>n</span>
-    <span>k</span>
-    <span>u</span>
-    <span>,</span>
-    <span> </span>
-    <span>s</span>
-    <span>e</span>
-    <span>k</span>
-    <span>a</span>
-    <span>l</span>
-    <span>i</span>
-    <span> </span>
-    <span>a</span>
-    <span>k</span>
-    <span>u</span>
-    <span> </span>
-    <span>m</span>
-    <span>i</span>
-    <span>n</span>
-    <span>t</span>
-    <span>a</span>
-    <span> </span>
-    <span>m</span>
-    <span>a</span>
-    <span>a</span>
-    <span>f</span>
-    <span> </span>
-    <span>: </span>
-    <span>(</span>
-  </div>
-  
-    <div class="banner">
-    <img src="https://telegra.ph/file/65cbac4189db8efb31d27-de2e941bba4f0510a2.jpg" alt="Banner 1">
-    <img src="https://telegra.ph/file/d0ccce4bf8dc9fbe72979-01239d18ee2cd52ebd.jpg" alt="Banner 2">
-    <img src="https://telegra.ph/file/f4870f51f6410265d8d9a-d222d89a1ee6e12fb0.jpg" alt="Banner 3">
-</div>
+    <audio id="myAudio" src="https://www.zamzar.com/files/0195c1be-75c8-7019-89ba-6666ae9bcb31/114131178/?tcs=z99"></audio>
 
     <script>
-        // Efek ketikan teks
-        function typeText(element, text, speed = 200) {
-            let index = 0;
-            const target = document.getElementById(element);
-            
-            function type() {
-                if (index < text.length) {
-                    target.innerHTML = text.substring(0, index + 1) + '<span class="cursor">|</span>';
-                    index++;
-                    setTimeout(type, speed);
-                } else {
-                    target.innerHTML = text; // Hapus cursor setelah selesai
-                }
-            }
-            type();
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
         }
-
-        // Function to create snowflakes
-        function createSnowflakes() {
-            const snowContainer = document.getElementById('snow-container');
-            const snowflakeCount = 100;
-
-            for (let i = 0; i < snowflakeCount; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.className = 'snowflake';
-                snowflake.innerHTML = '❄';
-                snowflake.style.left = Math.random() * 100 + 'vw';
-                snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'em';
-                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-                snowflake.style.animationDelay = Math.random() * 5 + 's';
-                snowContainer.appendChild(snowflake);
-            }
-        }
-        
-        function hideWelcome() {
-    const overlay = document.getElementById('welcomeOverlay');
-    overlay.style.opacity = '0'; // Mengurangi opacity
-    setTimeout(() => {
-        overlay.style.display = 'none'; // Menyembunyikan overlay setelah transisi
-    }, 500); // Waktu yang sama dengan durasi transisi
-}
-
-        // Play background music
-        function playMusic() {
-            const audio = document.getElementById('background-music');
-            audio.play().catch(error => {
-                console.log('Autoplay diblokir, silakan klik tombol untuk memutar musik.');
-            });
-        }
-
-        // Inisialisasi saat halaman dimuat
-        window.onload = function () {
-            createSnowflakes();
-            playMusic();
-            typeText('typing-effect', 'Hidup kita masih berjalan dan mimpi-mimpi kita terus melaju. Tidak di jalan yang sama. Tapi, rasaku padamu tetap ada. Berjalan hingga lima tahun lamanya. Masih tetap kusimpan rahasia itu dengan rapat dan rapi. Hingga kita dipertemukan kembali dalam suasana yang berbeda. Kau terjebak dalam sebuah permainan. Permainan yang kita mainkan saat itu bersama dengan teman yang lain. Dari situlah aku tahu bagaimana perasaanmu dulu. Jawaban dari semua pertanyaanku selama ini. Kau menyukai orang lain');
-              };
     </script>
-</body>
 
+</body>
 </html>
